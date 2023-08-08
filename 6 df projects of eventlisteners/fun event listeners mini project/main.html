@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Project - 6</title>
+  <style>
+    body{
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+    }
+    #shape {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+    }
+    
+  </style>
+</head>
+<body>
+    <h1> &nbsp; fun or suck ? </h1>
+  <div id="shape"></div>
+ 
+  <script>
+    var shape = document.getElementById("shape");
+    var left = 0;
+    var top = 0;
+
+    shape.onclick = function() {
+      shape.style.backgroundColor = getRandomColor();
+    };
+
+    shape.ondblclick = function() {
+      shape.style.width = "200px";
+      shape.style.height = "200px";
+    };
+
+    shape.onmouseover = function() {
+      shape.style.opacity = "0.5";
+    };
+
+    shape.onmouseout = function() {
+      shape.style.opacity = "1";
+      shape.style.width = "100px";
+      shape.style.height = "100px";
+    };
+
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>

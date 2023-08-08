@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Project - 5 </title>
+  <style>
+    #myElement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: rgb(0, 0, 0);
+  }
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+    
+    
+   
+  </style>
+</head>
+<body>
+    <h1>Click, Type or Hover</h1>
+  <div id="myElement"></div>
+
+  <script>
+    var element = document.getElementById("myElement");
+
+    element.onclick = function() {
+      element.style.backgroundColor = "blue";
+      element.innerHTML = "Clicked!";
+    };
+
+    element.ondblclick = function() {
+      element.style.backgroundColor = "green";
+      element.innerHTML = "Double-clicked!";
+    };
+
+    element.onmouseover = function() {
+      element.style.backgroundColor = "yellow";
+      element.innerHTML = "Mouseover!";
+    };
+
+    element.onmouseout = function() {
+      element.style.backgroundColor = "red";
+      element.innerHTML = "";
+    };
+
+    document.onkeydown = function(event) {
+      element.style.backgroundColor = "purple";
+      element.innerHTML = "Key down: " + event.key;
+    };
+
+    document.onkeyup = function(event) {
+      element.style.backgroundColor = "orange";
+      element.innerHTML = "Key up: " + event.key;
+    };
+  </script>
+</body>
+</html>
